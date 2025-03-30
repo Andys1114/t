@@ -1,0 +1,124 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.upload-area {
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6 !important;
+    cursor: pointer;
+}
+
+.upload-area:hover, .upload-area.dragover {
+    background-color: #e9ecef;
+    border-color: #6c757d !important;
+}
+
+.upload-area i {
+    color: #6c757d;
+}
+
+#summaryContent, #transcriptContent {
+    line-height: 1.6;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+#processBtn {
+    transition: all 0.3s ease;
+}
+
+#processBtn:disabled {
+    opacity: 0.6;
+}
+
+.advanced-toggle {
+    color: #6c757d;
+    font-weight: 500;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    transition: all 0.2s ease;
+}
+
+.advanced-toggle:hover {
+    background-color: #dee2e6;
+    color: #495057;
+}
+
+.loading-wave {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.loading-wave span {
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    background-color: #4CAF50;
+    margin: 0 3px;
+    border-radius: 3px;
+    animation: wave 1s infinite ease-in-out;
+}
+
+.loading-wave span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.loading-wave span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.loading-wave span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.loading-wave span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+@keyframes wave {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1);
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* 复制按钮动画 */
+@keyframes copied {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.copy-animation {
+    animation: copied 0.5s ease;
+}
